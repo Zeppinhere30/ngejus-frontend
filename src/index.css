@@ -1,0 +1,115 @@
+/* =========================================================================
+   NGEJUS POS - PREMIUM UI CSS RESET & BASE STYLES
+   ========================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* --- 1. GLOBAL RESET --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- 2. BASE HTML & BODY STYLES --- */
+html,
+body,
+#root {
+  width: 100vw;
+  height: 100vh;
+  /* Mencegah aplikasi memiliki scrollbar di luar (full edge-to-edge) */
+  overflow: hidden;
+  background-color: #f4f7f6;
+  font-family:
+    'Plus Jakarta Sans',
+    system-ui,
+    -apple-system,
+    sans-serif;
+  color: #0f291e; /* Warna teks utama (Hijau Gelap Premium) */
+}
+
+/* --- 3. CUSTOM COLOR VARIABLES (OPTIONAL TAPI BERGUNA) --- */
+:root {
+  --primary: #059669;
+  --primary-hover: #047857;
+  --secondary: #0f291e;
+  --bg-app: #f4f7f6;
+  --bg-card: #ffffff;
+  --text-main: #0f291e;
+  --text-muted: #64748b;
+  --border-color: #eaefe9;
+
+  /* Bayangan elegan */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 12px 24px rgba(5, 150, 105, 0.1);
+  --shadow-lg: 0 24px 48px rgba(0, 0, 0, 0.2);
+}
+
+/* --- 4. FORM ELEMENTS RESET --- */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  color: inherit;
+}
+
+/* Menghilangkan panah atas/bawah pada input type="number" */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+/* Memperhalus tampilan outline saat input di-klik */
+input:focus,
+button:focus {
+  outline: none;
+}
+
+button {
+  user-select: none;
+}
+button:active {
+  transform: scale(0.98);
+}
+
+/* --- 5. UTILITY CLASSES --- */
+
+/* Class sakti untuk menyembunyikan scrollbar tapi area tetap bisa di-scroll */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+/* Class untuk efek glassmorphism (jika dibutuhkan di modal/overlay) */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* --- 6. ANIMATIONS --- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
