@@ -148,7 +148,7 @@ export default function POSPage() {
   // =========================================================
   // UI RENDER
   // =========================================================
-
+  console.log('STORAGE URL:', import.meta.env.VITE_STORAGE_URL);
   return (
     <div style={styles.wrapper}>
       {toast && (
