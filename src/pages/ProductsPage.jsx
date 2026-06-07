@@ -422,7 +422,7 @@ export default function ProductsPage() {
                   }}
                 >
                   <img
-                    src={`http://127.0.0.1:8000/${product.image_url}`}
+                    src={`${import.meta.env.VITE_STORAGE_URL}/${product.image_url}`}
                     alt={product.name}
                     style={{
                       width: '100%',
@@ -599,7 +599,7 @@ export default function ProductsPage() {
         <div style={overlay}>
           <div style={modal}>
             <img
-              src={`http://127.0.0.1:8000/${detailModal.image_url}`}
+              src={`${import.meta.env.VITE_STORAGE_URL}/${detailModal.image_url}`}
               alt={detailModal.name}
               style={{
                 width: '100%',

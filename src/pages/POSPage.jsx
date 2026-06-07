@@ -197,7 +197,7 @@ export default function POSPage() {
                 <div key={product.id} className="product-card" style={styles.productCard}>
                   <div style={styles.imageWrap}>
                     <img
-                      src={`http://127.0.0.1:8000/${product.image_url}`}
+                      src={`${import.meta.env.VITE_STORAGE_URL}/${product.image_url}`}
                       alt={product.name}
                       style={styles.image}
                       onError={(e) => {
@@ -242,7 +242,7 @@ export default function POSPage() {
                 cart.map((item) => (
                   <div key={item.product_id} style={styles.cartItem}>
                     <img
-                      src={`http://127.0.0.1:8000/${item.image_url}`}
+                      src={`${item.image_url}`}
                       style={styles.cartImage}
                       onError={(e) => {
                         e.target.src = 'https://placehold.co/100x100?text=Img';
