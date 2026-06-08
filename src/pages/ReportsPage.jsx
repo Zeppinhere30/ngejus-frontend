@@ -321,7 +321,7 @@ export default function ReportsPage() {
       ) : (
         <>
           {/* STAT CARDS */}
-          <div style={S.statsGrid}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, minmax(0, 1fr))', gap: 16, marginBottom: 20 }}>
             {[
               { title: 'Total Pendapatan', value: fmt(totalRevenue), icon: <FiDollarSign size={22} />, bg: 'linear-gradient(135deg,#064E3B,#059669)', accent: '#6EE7B7', growth: '+18%', up: true },
               { title: 'Total Order', value: totalOrders, icon: <FiShoppingBag size={22} />, bg: 'linear-gradient(135deg,#1E3A5F,#1D4ED8)', accent: '#93C5FD', growth: '+12%', up: true },
