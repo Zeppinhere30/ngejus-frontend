@@ -284,8 +284,7 @@ export default function POSPage() {
                   {[
                     { key: 'cash', title: 'Tunai', icon: <FiDollarSign size={16} /> },
                     { key: 'qris', title: 'QRIS', icon: <FiSmartphone size={16} /> },
-                    { key: 'bca', title: 'BCA', icon: <FiCreditCard size={16} /> },
-                    { key: 'mandiri', title: 'MDR', icon: <FiCreditCard size={16} /> },
+          
                   ].map((m) => {
                     const active = paymentMethod === m.key;
                     return (
